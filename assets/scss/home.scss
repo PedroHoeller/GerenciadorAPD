@@ -1,0 +1,256 @@
+/* Home
+========================================================================== */
+body {
+    font-family: "Roboto";
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+button {
+    margin-top: 10px;
+}
+input[type="text"] {
+    display: block;
+    margin-top: 5px;
+}
+.estado-div, .entrada-div, .valor-pilha-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.estado-div {
+    background-color: #f9f9f9;
+}
+.entrada-div {
+    background-color: #e9e9e9;
+}
+.valor-pilha-div {
+    background-color: #d9d9d9;
+}
+.remove-btn {
+    position: absolute;
+    @media screen and (max-width: 680px) {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    top: 10px;
+    right: 10px;
+    background-color: $danger;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.first-in{
+    padding-top: 120px;
+
+}
+.form, .listagem{
+    padding-top: 120px;
+    display: flex;
+    min-height: 100vh;
+    &.noheight{
+        min-height: 0;
+    }
+    @media screen and (max-width: 1250px) {
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: 1020px) {
+        padding-top: 167px;
+    }
+    @media screen and (max-width: 680px) {
+        padding-top: 100px;
+    }
+    @media screen and (max-width: 430px) {
+        padding-top: 130px;
+    }
+    .left, .right{
+        padding: 40px;
+    }
+    .left{
+        width: calc(100% - 500px);
+        max-height: calc(100vh - 98px);
+        overflow: scroll;
+        @media screen and (max-width: 1250px) {
+            width: 100%;
+            max-height: none;
+            order: 2;
+        }
+    }
+    .right{
+        border-left: 2px solid $primary-color;
+        width: 598px;
+        max-height: calc(100vh - 98px);
+        overflow: scroll;
+        @media screen and (max-width: 1250px) {
+            border: none;
+            width: 100%;
+            max-height: none;
+            order: 1;
+        }
+        >*{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+}
+body{
+    background-color: $white;
+}
+h1{
+    font-family: "Roboto"!important;
+    color: $primary-color!important;
+    text-transform: uppercase!important;
+    font-size: 48px!important;
+    text-align: center!important;
+    @media screen and (max-width: 680px) {
+        font-size: 32px!important;
+    }
+    @media screen and (max-width: 430px) {
+        font-size: 28px!important;
+    }
+}
+h2{
+    font-family: "Roboto"!important;
+    color: $primary-color!important;
+    text-transform: uppercase!important;
+    font-size: 32px!important;
+}
+button, .btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    color: $white;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-size: 20px;
+    transition: all .3s;
+    font-weight: 600;
+    &:hover{
+        background-color: $white;
+        color: $primary-color;
+    }
+    @media screen and (max-width: 680px) {
+        width: 100%;
+        text-align: center;
+    }
+}
+input[type=text]{
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    color: $white;
+    font-family: "Roboto";
+    font-size: 20px;
+    transition: all .3s;
+    background-color: $white;
+    color: $primary-color;
+    @media screen and (max-width: 680px) {
+        width: 100%;
+    }
+}
+button.danger, .btn.danger{
+    border: 1px solid $danger!important;
+    background-color: $danger!important;
+    color: $white;
+    &:hover{
+        background-color: $white!important;
+        color: $danger!important;
+    }
+}
+button.green, .btn.green{
+    border: 1px solid $success!important;
+    background-color: $success!important;
+    color: $white!important;
+    &:hover{
+        background-color: $white!important;
+        color: $success!important;
+    }
+}
+.btn.grey{
+    border: 1px solid #3c3c3c;
+    background-color: #3c3c3c;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        color: #3c3c3c;
+    }
+}
+table{
+    button{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    td:not(:has(button)){
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    >*{
+        width: calc(100%/4 - 3*20px/4);
+    }
+}
+.controles{
+    padding: 40px 0px;
+}
+.alternative-font{
+    font-family: 'New Amsterdam'!important;
+}
+.font-upper{
+    font-size: 42px!important;
+    @media screen and (max-width: 1000px) {
+        font-size: 28px!important;
+    }
+}
+.equipe{
+    padding-top: 40px;
+}
+.equipe .article{
+    a{
+        display: block;
+        margin-top: 20px;
+        color: $black;
+        transition: all .3s;
+        position: relative;
+        width: fit-content;
+        text-decoration: none;
+        font-weight: 500;
+        &::after{
+            transition: all .3s;
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: auto;
+            bottom: -2px;
+            background-color: $primary-color;
+            width: 0px;
+            height: 2px;
+        }
+        &:hover{
+            color: $primary-color;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}
