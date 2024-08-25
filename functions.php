@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL & ~E_WARNING);
-
 function automatoAP($str, $estadoInicial, $estadosFinais, $delta, $pilha, $alfabeto, $alfabeto_pilha) {
     $resultado = [
         "status" => false,
@@ -34,15 +33,15 @@ function automatoAP($str, $estadoInicial, $estadosFinais, $delta, $pilha, $alfab
         if (isset($delta[$estadoAtual][$char][$topoPilha])) {
             list($novoEstado, $novoTopoPilha) = $delta[$estadoAtual][$char][$topoPilha];
             $estadoAtual = $novoEstado;
-            $resultado['stepby'] .= "($estadoAtual";
+            $resultado['stepby'] .= "($estadoAtual, [";
             if (empty($novoTopoPilha)) {
                 $novoTopoPilha = "&";
             }
-            $resultado['stepby'] .= ", $novoTopoPilha";
             foreach ($novoTopoPilha as $el) {
+                $resultado['stepby'] .= "$el, ";
                 array_push($pilha, $el);
             }
-            $resultado['stepby'] .= ")<br>";
+            $resultado['stepby'] .= "])<br>";
         } else {
             $resultado['stepby'] .= "($estadoAtual, $topoPilha)<br>";
         }
