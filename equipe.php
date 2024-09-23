@@ -1,3 +1,4 @@
+<!--
 <div class="equipe">
     <div class="al-container">
         <h2 class="font-upper">Equipe</h2>
@@ -25,3 +26,4 @@
         </div>
     </div>
 </div>
+-->
