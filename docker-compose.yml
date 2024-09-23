@@ -1,7 +1,7 @@
 services:
   php-apache:
     build: .
-    container_name: php-container
+    container_name: gerenciador_apd
     ports:
       - "3300:80" # Mapeia a porta 80 do container para a porta 8080 do host
     volumes:
